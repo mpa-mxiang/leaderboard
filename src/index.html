@@ -7,28 +7,28 @@
   </head>
   <body>
 
-    <div class="header">
+    <header>
       <h1>Leaderboard</h1>
-      </div>
-      <div class="containerDate"><p id="today"></p></div>
-
-    <section class="listBook ">
+      </header>
+<section>
+    <div class="scoreList">
+      <div id="scoreTtile">
     <h1>Recent scores</h1>
     <button type="submit">Refresh</button>
-    <ul id="bookList"></ul>
-    </section>
+  </div>
+    <ul id="scoreList"></ul>
+    </div>
 
-    <section class="newBook hidden">
-    <form id="book-form">
+    <form id="list-form">
       <h2>Add your score</h2>
-      <label for="title">Title:</label>
-      <input type="text" placeholder="Your name" id="title" required />
-      <label for="author">Author:</label>
-      <input type="text" placeholder="Your score" id="author" required />
+      <label for="name">Name:</label>
+      <input type="text" placeholder="Your name" id="name" required />
+      <label for="score">Score:</label>
+      <input type="text" placeholder="Your score" id="score" required />
       <div class="addBtn">
-        <button type="submit" id="addBook">Add</button>
+        <button type="submit" id="addScore">Submit</button>
       </div>
     </form>
-    </section>
+  </section>
   </body>
 </html>

@@ -21,7 +21,7 @@ export const postScore = async (data) => {
 }
 
 // GET action: get scores from API
-export const getScores = async () => {
+export const getScore = async () => {
   try {
     const response = await fetch(URL);
     const result = await response.json();

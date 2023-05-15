@@ -1,5 +1,4 @@
 import './style.css';
-import './storage.js';
 
 const scores = [
   { description: 'Name', point: 100, index: 1 },

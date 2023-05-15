@@ -1,19 +1,23 @@
-const typedTodo = document.querySelector('.new-task-input');
-const todos = document.querySelector('form');
-const todoData = JSON.parse(localStorage.getItem('todoData')) || { todo: '' }; // Initialize todoData with an empty todo property
-const savedData = JSON.parse(localStorage.getItem('todoData'));
+const formName = document.querySelector('#name');
+const formScore = document.querySelector('#score');
+const forms = document.getElementById('contact-form');
+const formData = JSON.parse(localStorage.getItem('formData')) || {};
+const savedData = JSON.parse(localStorage.getItem('formData'));
+if (formData.name) {
+  formName.value = formData.name;
+}
+if (formData.score) {
+  formScore.value = formData.score;
+}
+forms.addEventListener('input', (event) => {
+  formData[event.target.name] = event.target.value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
 if (savedData) {
-  typedTodo.value = savedData.todo;
+  formName.value = savedData.name;
+  formScore.value = savedData.email;
 }
 
-todos.addEventListener('input', (event) => {
-  if (event.target.id === typedTodo.id) {
-    todoData.todo = event.target.value;
-  }
-  localStorage.setItem('todoData', JSON.stringify(todoData));
-});
-
-todos.addEventListener('submit', () => {
-  todoData.todo = '';
-  localStorage.setItem('todoData', JSON.stringify(todoData));
+forms.addEventListener('submit', () => {
+  localStorage.clear();
 });

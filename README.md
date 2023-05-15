@@ -29,7 +29,7 @@
 
 # 📖 Leaderboard<a name="about-project"></a>
 
-**Leaderboard** In this project, I build a basic website that allows users to have a simple leaderboard using es6 syntax and webpack.
+**Leaderboard** In this project, I build a simple website that allows users to have a simple leaderboard using es6 syntax and webpack.
 
 ## 🛠 Built With <a name="built-with"></a>
 

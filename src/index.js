@@ -1,13 +1,14 @@
 import './style.css';
+import './api';
 
 const scores = [
-  { description: 'Name', point: 100, index: 1 },
-  { description: 'Name', point: 20, index: 2 },
-  { description: 'Name', point: 50, index: 3 },
-  { description: 'Name', point: 78, index: 4 },
-  { description: 'Name', point: 125, index: 5 },
-  { description: 'Name', point: 77, index: 6 },
-  { description: 'Name', point: 42, index: 7 },
+  { name: 'Name', point: 100, index: 1 },
+  { name: 'Name', point: 20, index: 2 },
+  { name: 'Name', point: 50, index: 3 },
+  { name: 'Name', point: 78, index: 4 },
+  { name: 'Name', point: 125, index: 5 },
+  { name: 'Name', point: 77, index: 6 },
+  { name: 'Name', point: 42, index: 7 },
 ];
 
 function renderScores() {
@@ -17,7 +18,7 @@ function renderScores() {
 
   scores.forEach((score) => {
     const newScore = document.createElement('li');
-    newScore.innerHTML = `${score.description}:${score.point}`;
+    newScore.innerHTML = `${score.name}:${score.point}`;
 
     scoreList.appendChild(newScore);
   });

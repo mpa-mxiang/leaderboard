@@ -4,7 +4,7 @@ const URL = BASE_URL + POST_ID + '/scores/';
 
 
 // POST action: get scores from users
-const postScore=async(data)=> {
+export const postScore=async(data)=> {
     try {
       const response = await fetch(URL, {
         method: "POST", // or 'PUT'

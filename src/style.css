@@ -124,12 +124,11 @@ button {
   font-family: 'Shantell Sans', cursive;
 }
 
-
 #form {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  align-items: right;
+  align-items:flex-end;
 }
 
 form input {

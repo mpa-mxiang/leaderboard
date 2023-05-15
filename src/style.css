@@ -128,7 +128,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  align-items:flex-end;
+  align-items: flex-end;
 }
 
 form input {

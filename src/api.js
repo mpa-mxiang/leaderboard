@@ -24,8 +24,8 @@ export const postScore = async (data) => {
 export const getScore = async () => {
   try {
     const response = await fetch(URL);
-    const result = await response.json();
-    return result.result;
+    const results = await response.json();
+    return results.result;
   } catch (error) {
     console.error("Error:", error);
   }

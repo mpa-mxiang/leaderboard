@@ -48,10 +48,19 @@ createScores();
 const refreshScores = () => {
   const refreshButton = document.getElementById('refresh');
   const scoreList = document.getElementById('scoreList');
-  refreshButton.addEventListener('submit', (Event)=> {
-    Event.preventDefault();
+  refreshButton.addEventListener('click', async (event) => {
+    event.preventDefault();
     renderScores();
+    const refreshNewScores = await getScore();
+    scoreList.innerHTML = ""; // clear the list before repopulating
+    refreshNewScores.sort((a, b) => a.index - b.index); // sort scores in descending order
+    refreshNewScores.forEach((rns) => {
+      const newScore = document.createElement('li');
+      newScore.innerHTML = `${rns.user}: ${rns.score}`;
+      scoreList.appendChild(newScore);
+    });
   });
-  getScore(score);
-}
+};
+
+refreshScores();
 

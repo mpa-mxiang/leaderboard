@@ -1,5 +1,5 @@
 import './style.css';
-import { postScore, getScore } from './api';
+import { postScore, getScore } from './api.js';
 
 const scores = [
   { name: 'Name', point: 100, index: 1 },
@@ -37,11 +37,10 @@ const createScores = () => {
     const score = {
       user: newName,
       score: newScore,
-    }
+    };
     postScore(score);
   });
-
-}
+};
 
 createScores();
 
@@ -52,7 +51,7 @@ const refreshScores = () => {
     event.preventDefault();
     renderScores();
     const refreshNewScores = await getScore();
-    scoreList.innerHTML = ""; // clear the list before repopulating
+    scoreList.innerHTML = ''; // clear the list before repopulating
     refreshNewScores.sort((a, b) => a.index - b.index); // sort scores in descending order
     refreshNewScores.forEach((rns) => {
       const newScore = document.createElement('li');
@@ -63,4 +62,3 @@ const refreshScores = () => {
 };
 
 refreshScores();
-

@@ -44,12 +44,11 @@ header {
   height: 40px;
   padding: 1px 12px;
   align-items: center;
-  min-width: 370px;
 }
 
 section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 87%;
   justify-content: space-between;
 }
@@ -133,7 +132,7 @@ button {
 
 form input {
   border: black solid 3px;
-  height: 3vw;
+  height: 9vw;
   width: 100%;
   padding-left: 1vw;
   font-weight: 900;
@@ -164,4 +163,19 @@ footer {
   border: black solid 3px;
   margin-top: 10vw;
   padding: 1vw;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: center;
+  }
+  section {
+    flex-direction: row;
+    gap: 4em;
+    justify-content: center;
+  }
+
+  form input {
+    height: 4rem;
+  }
 }

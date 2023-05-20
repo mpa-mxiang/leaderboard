@@ -2,6 +2,8 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 *,
@@ -100,7 +102,7 @@ a:hover {
 #scoreTtile {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  justify-content: space-between;
 }
 
 .viewBook {
@@ -177,6 +179,6 @@ footer {
   }
 
   form input {
-    height: 4rem;
+    height: 3rem;
   }
 }

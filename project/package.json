@@ -10,10 +10,10 @@
   
   "repository": {
     "type": "git",
-    "url": "to-do-list"
+    "url": "leaderboard"
   },
   "keywords": [
-    "todolist"
+    "leaderboard"
   ],
   "author": "Jiachun Xiang",
   "license": "MIT"

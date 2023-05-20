@@ -38,6 +38,8 @@ const createScores = () => {
       user: newName,
       score: newScore,
     };
+    formName.value = '';
+    formScore.value = '';
     postScore(score);
   });
 };
